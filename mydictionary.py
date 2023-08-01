@@ -1,7 +1,9 @@
+import os
 import requests
 import click
 
-API_KEY = "4e5cc1cd-e756-41de-893d-170355338012"
+
+API_KEY = os.environ.get("MERRIAM_WEBSTER_API_KEY")
 BASE_URL = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
 
 def get_word_definition(word):
