@@ -15,7 +15,7 @@ def get_word_definition(word):
         response.raise_for_status()  # Check for HTTP errors (e.g., 404, 500)
         data = response.json()
         if data:
-            return data[0]['hwi']['hw'], data[0]['fl'], data[0]['shortdef'][0]
+            return list(data[0]['hwi']['hw'], data[0]['fl'], data[0]['shortdef'][0])
         else:
             return None
     except requests.exceptions.HTTPError as http_err:
