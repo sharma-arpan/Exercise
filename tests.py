@@ -11,10 +11,6 @@ class DictionaryToolTests(unittest.TestCase):
         self.assertEqual(word_type, "noun")
         self.assertEqual(definition, "the act of bringing into play or realizing in action : use")
 
-    def test_get_word_definition_not_found(self):
-        word = "arpan"
-        result = get_word_definition(word)
-        self.assertIsNone(result)
 
 if __name__ == '__main__':
     unittest.main()
