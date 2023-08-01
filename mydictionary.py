@@ -10,6 +10,7 @@ BASE_URL = "https://www.dictionaryapi.com/api/v3/references/collegiate/json/"
 def get_word_definition(word):
     url = f"{BASE_URL}{word}?key={API_KEY}"
     response = requests.get(url)
+    print(url)
     try:
         response.raise_for_status()  # Check for HTTP errors (e.g., 404, 500)
         data = response.json()
