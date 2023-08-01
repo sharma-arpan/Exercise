@@ -14,14 +14,11 @@ def get_word_definition(word):
     try:
         response.raise_for_status()  # Check for HTTP errors (e.g., 404, 500)
         data = response.json()
-        
-        if data:
-            print(data[0]['hwi']['hw'])
-            print(data[0]['fl'])
-            print(data[0]['shortdef'][0])
-            return data[0]['hwi']['hw'], data[0]['fl'], data[0]['shortdef'][0]
-        else:
-            return None
+        if isinstance(data, list):
+            if data:
+                return data[0]['hwi']['hw'], data[0]['fl'], data[0]['shortdef'][0]
+            else:
+                return None
     except requests.exceptions.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
     except requests.exceptions.RequestException as req_err:
