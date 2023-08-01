@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Set Secret Token
-      run: echo "API_KEY=${{ secrets.MERRIAM_WEBSTER_API_KEY }}" >> $GITHUB_ENV
+      run: echo "MERRIAM_WEBSTER_API_KEY=${{ secrets.MERRIAM_WEBSTER_API_KEY }}" >> $GITHUB_ENV
 
     - name: Checkout repository
       uses: actions/checkout@v2
