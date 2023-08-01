@@ -1,5 +1,5 @@
 import unittest
-from dictionary_tool import get_word_definition
+from mydictionary import get_word_definition
 
 class DictionaryToolTests(unittest.TestCase):
 
