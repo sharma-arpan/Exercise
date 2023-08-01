@@ -12,7 +12,7 @@ class DictionaryToolTests(unittest.TestCase):
         self.assertEqual(definition, "the act of bringing into play or realizing in action : use")
 
     def test_get_word_definition_not_found(self):
-        word = "nonexistentword"
+        word = "arpan"
         result = get_word_definition(word)
         self.assertIsNone(result)
 
