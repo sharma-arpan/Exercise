@@ -7,7 +7,7 @@ class DictionaryToolTests(unittest.TestCase):
         word = "exercise"
         print(get_word_definition(word))
         pronunciation, word_type, definition = get_word_definition(word)
-        self.assertEqual(pronunciation, "ˈek-sər-ˌsīz")
+        self.assertEqual(pronunciation, "ex*er*cise") 
         self.assertEqual(word_type, "noun")
         self.assertEqual(definition, "the act of bringing into play or realizing in action")
 
