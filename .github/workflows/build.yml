@@ -1,5 +1,4 @@
 name: Build
-API_KEY= ${{secrets.MERRIAM_WEBSTER_API_KEY}}
 
 on:
   push:
