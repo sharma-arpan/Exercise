@@ -5,7 +5,6 @@ class DictionaryToolTests(unittest.TestCase):
 
     def test_get_word_definition(self):
         word = "exercise"
-        print(get_word_definition(word))
         pronunciation, word_type, definition = get_word_definition(word)
         self.assertEqual(pronunciation, "ex*er*cise") 
         self.assertEqual(word_type, "noun")
