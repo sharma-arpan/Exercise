@@ -9,7 +9,7 @@ class DictionaryToolTests(unittest.TestCase):
         pronunciation, word_type, definition = get_word_definition(word)
         self.assertEqual(pronunciation, "ex*er*cise") 
         self.assertEqual(word_type, "noun")
-        self.assertEqual(definition, "the act of bringing into play or realizing in action")
+        self.assertEqual(definition, "the act of bringing into play or realizing in action : use")
 
     def test_get_word_definition_not_found(self):
         word = "nonexistentword"
